@@ -83,26 +83,34 @@ COUNTDOWN
 #############################################################################################*/
 
 //TASK: Create a variable named cdX. Assign it the number equal to half the board's width.
+var cdX = board.width * 0.5;
 
 //TASK: Create a variable named cdY. Assign it the number equal to half the board's height.
+var cdY = board.height * 0.5;
 
 //TASK: Create a variable named cdText. Assign it the number 3.
+var cdText = 3
 
 //TASK: Create a variable named cdFontFamily. Assign it the string "Comic Sans MS".
+var cdFontFamily = "Comic Sans MS";
 
 //TASK: Create a variable named cdFontSize. Assign it the string "80px".
+var cdFontSize = "80px";
 
 //TASK: Create a variable named cdFontColor. Assign it the string "white".
+var cdFontColor = "white";
 
 //TASK: Create a variable named countdown. Use the CountDown Class to store a count down object 
 //inside countdown. Pass the following arguments into the class constructor: 
 //(cdX, cdY, cdText, cdFontFamily, cdFontSize, cdFontColor)
+var countdown = new Countdown(cdX, cdY, cdText, cdFontFamily, cdFontSize, cdFontColor);
 
 
 //TASK: Create a variable named countdownCounter. Assign it the number 180.
+var countdownCounter = 180;
 
 //TASK: Assign countdown.active the boolean value true.
-
+countdown.active = true;
 
 /*#############################################################################################
 UPDATE FUNCTION
@@ -163,7 +171,7 @@ function update(){
 	//TASK: Write the condition for the conditional statement below.
 	//If countdown.active is equal to the boolean false, run the code
 	//inside the conditional statement's body.
-	if(true){
+	if(countdown.active == false){
 		ball.draw();
 		ball.position.add(ball.velocity);
 
@@ -199,6 +207,7 @@ function update(){
 		ball.position.setX(bX);
 		ball.position.setY(bY);
 		//TASK: Assign countdown.active the boolean value true
+		countdown.active = true;
 	}
 
 	if(ball.rightWallCollision()){
@@ -206,6 +215,7 @@ function update(){
 		ball.position.setX(bX);
 		ball.position.setY(bY);
 		//TASK: Assign countdown.active the boolean value true
+		countdown.active = true;
 	}
 
 	/*######################################################
@@ -214,25 +224,35 @@ function update(){
 	//TASK: Write the condition for the conditional statement below.
 	//If countdown.active is equal to the boolean true, run the code
 	//inside the conditional statement's body.
-	if(true){
+	if(countdown.active == true){
 		//TASK: Call countdown's draw() method.
-
+		countdown.draw();
 
 		//TASK: Use a conditional statement. If countdownCounter is equal to 120,
 		//decrement countdown.
+		if(countdownCounter == 120){
+			countdown.decrementCount();
+		}
 
 
 		//TASK: Use a conditional statement. If countdownCounter is equal to 60,
 		//decrement countdown.
-
+		if(countdownCounter == 60){
+			countdown.decrementCount();
+		}
 
 		//TASK: Use a conditional statement. If countdownCounter is equal to 0,
 		//assign countdown.active the boolean value false, set countdown's text to the
 		//number 3, and assign countdownCounter the number 180.
+		if(countdownCounter == 0){
+			countdown.active = false;
+			countdown.setCount(3);
+			countdownCounter = 180;
+		}
 
 
 		//TASK: Decrement countdownCounter using the decrement operator.
-		
+		countdownCounter--;
 	}
 
 
