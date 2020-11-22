@@ -127,15 +127,16 @@ function update(){
 	board.clear();
 	//TASK: Provide board.overlayImage() with an argument that is a string. The string
 	//should be the file path to an image.
-	board.overlayImage();
+	board.overlayImage("Images/retro/classic_background.png");
 
 	/*######################################################
 	PADDLE 1 ANIMATION
 	######################################################*/
-	paddle1.draw();
+	//paddle1.draw();
 	//TASK: Comment out paddle1.draw(). Use paddle1.overlayImage() to draw an image
 	//over paddle1. Provide paddle1.overlayImage() with an argument that is a string. 
 	//The string should be the file path to an image.
+	paddle1.overlayImage("Images/retro/classic_paddle.png")
 
 
 	if(paddle1.moveUpKeyActivated()){
@@ -159,10 +160,11 @@ function update(){
 	/*######################################################
 	PADDLE 2 ANIMATION
 	######################################################*/
-	paddle2.draw();
+	//paddle2.draw();
 	//TASK: Comment out paddle2.draw(). Use paddle2.overlayImage() to draw an image
 	//over paddle2. Provide paddle2.overlayImage() with an argument that is a string. 
 	//The string should be the file path to an image.
+	paddle2.overlayImage("Images/retro/classic_paddle.png")
 
 
 	if(paddle2.moveUpKeyActivated()){
@@ -187,10 +189,11 @@ function update(){
 	BALL ANIMATION
 	######################################################*/
 	if(countdown.active == false){
-		ball.draw();
+		//ball.draw();
 		//TASK: comment out ball.draw(). Use ball.overlayImage() to draw an image
 		//over ball. Provide ball.overlayImage() with an argument that is a string. 
 		//The string should be the file path to an image.
+		ball.overlayImage("Images/retro/orange_ball.png")
 
 		ball.position.add(ball.velocity);
 
@@ -262,10 +265,11 @@ function update(){
 	/*######################################################
 	MOD 1 ANIMATION
 	######################################################*/
-	mod1.draw();
+	//mod1.draw();
 	//TASK: Comment out mod1.draw(). Use mod1.overlayImage() to draw an image
 	//over mod1. Provide mod1.overlayImage() with an argument that is a string. 
 	//The string should be the file path to an image.
+	mod1.overlayImage("Images/retro/red_ball.png");
 
 	mod1.position.add(mod1.velocity);
 
@@ -308,10 +312,11 @@ function update(){
 	/*######################################################
 	MOD 2 ANIMATION
 	######################################################*/
-	mod2.draw();
+	//mod2.draw();
 	//TASK: Comment out mod2.draw(). Use mod2.overlayImage() to draw an image
 	//over mod2. Provide mod2.overlayImage() with an argument that is a string. 
 	//The string should be the file path to an image.
+	mod2.overlayImage("Images/retro/pink_ball.png")
 
 	mod2.position.add(mod2.velocity);
 
